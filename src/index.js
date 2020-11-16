@@ -53,7 +53,7 @@ function onSearch(e) {
     } else { 
         API.fetchCountryByName(searchQuery)
         .then(renderCountryCard)
-        .catch(error => console.log('Ошибка ввода, повторите попытку'));
+        .catch(error => pushError('Ошибка ввода, такой страны не существует'));
     }
 
     
